@@ -59,7 +59,6 @@ import ja.burhanrashid52.photoeditor.shape.ShapeBuilder
 import ja.burhanrashid52.photoeditor.shape.ShapeType
 import java.io.File
 
-import com.reactnativephotoeditor.databinding.ExtendedActivityBinding
 
 open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, View.OnClickListener,
   PropertiesBSFragment.Properties, ShapeBSFragment.Properties, StickerListener,
@@ -84,8 +83,6 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
   private val mConstraintSet = ConstraintSet()
   private var mIsFilterVisible = false
   private var mIsCropVisible = false
-
-  private lateinit var binding: ExtendedActivityBinding
 
   @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -113,13 +110,6 @@ open class PhotoEditorActivity : AppCompatActivity(), OnPhotoEditorListener, Vie
     "TEST_TAG",
     "Verbose: more verbose than DEBUG logs __99____[$value1]_________" 
   )
-
-  binding = ExtendedActivityBinding.inflate(layoutInflater)
-  binding.cropImageView.setOnCropWindowChangedListener {
-    updateExpectedImageSize()
-  }
-
-  setCropImageView(binding.cropImageView)
 
 
     mPropertiesBSFragment = PropertiesBSFragment()
