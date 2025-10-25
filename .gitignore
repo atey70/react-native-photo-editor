@@ -63,3 +63,5 @@ android/gradle/wrapper/wrapper
 android/gradle/wrapper/native
 android/gradle/wrapper/daemon
 android/gradle/wrapper/android
+android/gradle/wrapper/.tmp
+android/gradle/wrapper/kotlin-profile
