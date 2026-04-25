@@ -5,10 +5,12 @@ buildscript {
   repositories {
     google()
     // jcenter()
+    mavenCentral()
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:8.11.0'
+    // classpath 'com.android.tools.build:gradle:8.11.0'
+    classpath 'com.android.tools.build:gradle'
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
@@ -53,7 +55,7 @@ android {
 
 repositories {
   mavenCentral()
-  jcenter()
+  // jcenter()
   google()
 
   def found = false
